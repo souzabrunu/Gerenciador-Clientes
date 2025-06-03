@@ -1,7 +1,6 @@
 import csv
-import os # Importar o módulo 'os' para manipulação de arquivos
+import os 
 
-# Nome do arquivo onde os dados serão armazenados
 NOME_ARQUIVO = 'clientes_salao.csv'
 CAMPOS = ['Nome', 'MesNascimento', 'Contato', 'UltimoServico']
 
@@ -13,7 +12,7 @@ def inicializar_arquivo():
             writer.writerow(CAMPOS)
         print(f"Arquivo '{NOME_ARQUIVO}' criado com sucesso.")
     except FileExistsError:
-        pass # O arquivo já existe, não precisa fazer nada
+        pass 
     except Exception as e:
         print(f"Erro ao inicializar o arquivo: {e}")
 
@@ -73,7 +72,7 @@ def excluir_cliente():
     cliente_encontrado = False
 
     try:
-        # Verifica se o arquivo existe e tem conteúdo
+        
         if not os.path.exists(NOME_ARQUIVO) or os.stat(NOME_ARQUIVO).st_size == 0:
             print(f"O arquivo '{NOME_ARQUIVO}' está vazio ou não existe. Não há clientes para excluir.")
             return
@@ -81,18 +80,18 @@ def excluir_cliente():
         with open(NOME_ARQUIVO, 'r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
-                # Se o nome da linha atual não for o que queremos excluir, adiciona à lista de restantes
+                
                 if row['Nome'].strip().lower() != nome_para_excluir.lower():
                     clientes_restantes.append(row)
                 else:
                     cliente_encontrado = True
         
         if cliente_encontrado:
-            # Sobrescreve o arquivo com os clientes restantes
+            
             with open(NOME_ARQUIVO, 'w', newline='', encoding='utf-8') as file:
                 writer = csv.DictWriter(file, fieldnames=CAMPOS)
-                writer.writeheader() # Escreve o cabeçalho novamente
-                writer.writerows(clientes_restantes) # Escreve todas as linhas restantes
+                writer.writeheader() 
+                writer.writerows(clientes_restantes) 
             print(f"Cliente '{nome_para_excluir}' excluído com sucesso!")
         else:
             print(f"Cliente '{nome_para_excluir}' não encontrado.")
@@ -103,13 +102,13 @@ def excluir_cliente():
 
 def menu():
     """Exibe o menu principal do programa."""
-    inicializar_arquivo() # Garante que o arquivo existe ao iniciar
+    inicializar_arquivo() 
 
     while True:
         print("\n--- Gerenciador de Clientes do Salão ---")
         print("1. Adicionar Novo Cliente")
         print("2. Consultar Clientes")
-        print("3. Excluir Cliente") # Nova opção
+        print("3. Excluir Cliente") 
         print("4. Sair")
         
         opcao = input("Escolha uma opção: ")
@@ -118,7 +117,7 @@ def menu():
             adicionar_cliente()
         elif opcao == '2':
             consultar_clientes()
-        elif opcao == '3': # Chama a nova função
+        elif opcao == '3': 
             excluir_cliente()
         elif opcao == '4':
             print("Saindo do programa. Até mais!")
@@ -126,6 +125,6 @@ def menu():
         else:
             print("Opção inválida. Por favor, escolha 1, 2, 3 ou 4.")
 
-# Executa o menu principal quando o script é rodado
+
 if __name__ == "__main__":
     menu()
