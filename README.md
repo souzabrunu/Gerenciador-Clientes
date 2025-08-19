@@ -1,3 +1,10 @@
-# gerenciador-clientes
+# 👤 Gerenciador de Clientes (CLI)
 
-Programa Python para gerenciar clientes de salão de beleza
+Aplicativo de **linha de comando** para **cadastrar, listar, buscar, atualizar e remover clientes**. Ideal para rotinas simples (ex.: salão de beleza).
+
+## Como executar
+```bash
+python gerenciador_clientes.py
+# Em alguns Macs:
+# python3 gerenciador_clientes.py
+
