@@ -15,6 +15,8 @@ Em alguns Macs:
     python3 gerenciador_clientes.py
 
 ## Exemplo (fluxo típico)
+![Demonstração no terminal](assets/demo-terminal.png)
+
 - Cadastrar cliente → informar nome, telefone, serviço
 - Listar clientes → visualizar todos
 - Buscar/atualizar/remover → por nome ou telefone
