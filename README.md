@@ -1,34 +1,57 @@
-# 👤 Gerenciador de Clientes (CLI)
+# 👥 Gerenciador de Clientes (CLI)
 
-![Status](https://img.shields.io/badge/status-ativo-brightgreen)
-![Python](https://img.shields.io/badge/python-3.x-informational)
+Aplicação em Python desenvolvida para gerenciamento de clientes via linha de comando, permitindo operações completas de cadastro e manipulação de dados.
 
-Aplicativo de linha de comando para cadastrar, listar, buscar, atualizar e remover clientes. Ideal para rotinas simples (ex.: salão de beleza).
+---
 
-## Como executar
-No terminal, dentro da pasta do projeto, rode:
+## 🚀 Funcionalidades
 
-    python gerenciador_clientes.py
+* Cadastro de clientes com informações básicas
+* Listagem completa de registros
+* Busca de clientes por nome ou telefone
+* Atualização de dados cadastrados
+* Remoção de clientes
+* Interface interativa via terminal (CLI)
 
-Em alguns Macs:
+---
 
-    python3 gerenciador_clientes.py
+## 🛠️ Tecnologias
 
-## Exemplo (fluxo típico)
-![Demonstração no terminal](assets/demo1-terminal.png)
+* Python 3
 
-- Cadastrar cliente → informar nome, telefone, serviço
-- Listar clientes → visualizar todos
-- Buscar/atualizar/remover → por nome ou telefone
+---
 
-## 📌 Roadmap (próximos passos)
-- [ ] Persistir dados em arquivo (CSV/JSON)
-- [ ] Validação de telefone (formato e duplicidade)
-- [ ] Buscar por múltiplos campos (nome/telefone)
-- [ ] Exportar relatório simples (CSV)
-- [ ] Testes básicos (pytest)
+## 🧠 Conceitos aplicados
 
-- [ ] Testes básicos (pytest)
+* Estrutura de dados (listas e dicionários)
+* Sistema CRUD (Create, Read, Update, Delete)
+* Estruturas condicionais (if/else)
+* Laços de repetição (while)
+* Organização do código em funções
+* Entrada e saída de dados (input/print)
+* Controle de fluxo de execução
 
+---
 
+## ▶️ Como executar
 
+```bash
+git clone https://github.com/souzabrunu/Gerenciador-Clientes.git
+cd Gerenciador-Clientes
+python gerenciador_clientes.py
+```
+
+---
+
+## 📌 Objetivo
+
+Projeto desenvolvido com foco na prática de lógica de programação e construção de sistemas interativos, simulando um cenário real de gerenciamento de dados e operações CRUD em ambiente de terminal.
+
+---
+
+## 🔮 Melhorias futuras
+
+* Persistência de dados em arquivo (JSON/CSV)
+* Validação de dados (telefone, duplicidade)
+* Implementação de testes automatizados
+* Possível evolução para interface gráfica ou API
